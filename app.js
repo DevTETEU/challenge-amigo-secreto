@@ -14,5 +14,14 @@ function atualizarLista(){
     const lista = document.getElementById('listaAmigos');
     lista.innerHTML = "";
 
-    
+    if (mostrar) {
+        amigos.forEach(function(amigo) {
+            const li = document.createElement('li');
+            li.textContent = amigo;
+            lista.appendChild(li);
+        });
+        lista.style.display = "block";
+    } else {
+        lista.style.display = "none";
+    }
 }
